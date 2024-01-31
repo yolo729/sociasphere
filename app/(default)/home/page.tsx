@@ -3,14 +3,14 @@ export const metadata = {
   description: "Page description",
 };
 
-import Header from "@/components/ui/header";
-import Hero from "@/components/hero";
+import Landing from "@/components/landing";
+import Header from "@/components/ui/header-one";
 
 export default function Home() {
   return (
     <>
       <Header />
-      <Hero />
+      <Landing />
     </>
   );
 }

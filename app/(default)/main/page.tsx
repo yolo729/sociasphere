@@ -7,6 +7,7 @@ import Social from "@/components/social";
 import Blog from "@/components/blog";
 import Newsletter from "@/components/newsletter";
 import Contact from "@/components/contact";
+import Analysis from "@/components/analysis";
 
 export default function Main() {
   return (
@@ -14,7 +15,8 @@ export default function Main() {
       {/* <Social /> */}
       {/* <Blog /> */}
       {/* <Newsletter /> */}
-      <Contact />
+      {/* <Contact /> */}
+      <Analysis />
     </>
   );
 }

@@ -31,7 +31,7 @@ export default function Hero() {
                   </p>
                   <Link
                     href="/home"
-                    className="btn-sm mt-12 text-gray-200 bg-indigo-500 rounded-xl hover:bg-indigo-400 w-fit "
+                    className="btn-sm mt-12 text-gray-200 bg-indigo-500 rounded-xl shadow-allshadow shadow-indigo-500/50 hover:bg-indigo-400 w-fit  "
                   >
                     <span>Try Free Trial</span>
                   </Link>

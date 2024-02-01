@@ -3,20 +3,8 @@ export const metadata = {
   description: "Page description",
 };
 
-import Social from "@/components/social";
-import Blog from "@/components/blog";
-import Newsletter from "@/components/newsletter";
-import Contact from "@/components/contact";
-import Analysis from "@/components/analysis";
+import RightBar from "@/components/ui/right-bar";
 
 export default function Main() {
-  return (
-    <>
-      {/* <Social /> */}
-      {/* <Blog /> */}
-      {/* <Newsletter /> */}
-      {/* <Contact /> */}
-      <Analysis />
-    </>
-  );
+  return <RightBar />;
 }

@@ -1,8 +1,15 @@
 "use client";
 import { useRouter } from "next/navigation";
+import { useStatus } from "@/context/StatusContext";
 
 export default function Landing() {
   const router = useRouter();
+  const [status, setStatus] = useStatus();
+
+  const goMain = (status: number) => {
+    setStatus(status);
+    router.push("/main");
+  };
   return (
     <section className="relative">
       {/* Illustration behind hero content */}
@@ -25,17 +32,34 @@ export default function Landing() {
           <div className="grid grid-cols-2 gap-12">
             <button
               className="text-lg font-bold btn-lg bg-green-400 rounded-[56px] hover:bg-green-300"
-              onClick={() => router.push("/main")}
+              onClick={() => {
+                goMain(1);
+              }}
             >
               Create AI Post on Instagram/Facebook
             </button>
-            <button className="text-lg font-bold btn-lg bg-green-400 rounded-[56px] hover:bg-green-300">
+            <button
+              className="text-lg font-bold btn-lg bg-green-400 rounded-[56px] hover:bg-green-300"
+              onClick={() => {
+                goMain(2);
+              }}
+            >
               Create AI Integrated Blog Post
             </button>
-            <button className="text-lg font-bold btn-lg bg-green-400 rounded-[56px] hover:bg-green-300">
+            <button
+              className="text-lg font-bold btn-lg bg-green-400 rounded-[56px] hover:bg-green-300"
+              onClick={() => {
+                goMain(3);
+              }}
+            >
               Create AI Integrated Newsletter
             </button>
-            <button className="text-lg font-bold btn-lg bg-green-400 rounded-[56px] hover:bg-green-300">
+            <button
+              className="text-lg font-bold btn-lg bg-green-400 rounded-[56px] hover:bg-green-300"
+              onClick={() => {
+                goMain(4);
+              }}
+            >
               Data Analysis
             </button>
           </div>

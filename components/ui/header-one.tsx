@@ -4,11 +4,19 @@ import { useState, useEffect } from "react";
 
 import Link from "next/link";
 import Logo from "./logo-one";
-import Dropdown from "@/components/utils/dropdown";
-import MobileMenu from "./mobile-menu";
+import { useRouter } from "next/navigation";
+import { useStatus } from "@/context/StatusContext";
 
 export default function Header() {
   const [top, setTop] = useState<boolean>(true);
+
+  const router = useRouter();
+  const [status, setStatus] = useStatus();
+
+  const goMain = (status: number) => {
+    setStatus(status);
+    router.push("/main");
+  };
 
   // detect whether user has scrolled the page down by 10px
   const scrollHandler = () => {
@@ -42,9 +50,14 @@ export default function Header() {
             <Link href="/feed" className="px-4 font-medium text-white">
               Feed
             </Link>
-            <Link href="/contact" className="px-4 font-medium text-white">
+            <button
+              onClick={() => {
+                goMain(5);
+              }}
+              className="px-4 font-medium text-white"
+            >
               Contact
-            </Link>
+            </button>
           </div>
         </div>
       </div>

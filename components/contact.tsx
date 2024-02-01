@@ -3,7 +3,7 @@
 import Image from "next/image";
 import SendIcon from "@/public/svgs/send.svg";
 import PhoneIcon from "@/public/svgs/phone.svg";
-import NewsletterIcon from "@/public/svgs/newsletter.svg";
+import NewsletterIcon from "@/public/svgs/newsletter_active.svg";
 import { useRouter } from "next/navigation";
 
 export default function Contact() {
@@ -13,7 +13,7 @@ export default function Contact() {
       {/* Illustration behind hero content */}
 
       <div className="mx-auto px-20 sm:px-24 col-span-7">
-        <p className="text-3xl font-bold my-8">Contact</p>
+        <p className="text-5xl font-bold my-8">Contact</p>
         <p className="text-sm font-bold my-8">
           Questions or ideas? We would love to hear from you!
         </p>

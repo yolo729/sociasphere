@@ -18,7 +18,7 @@ export default function Hero() {
           {/* Section header */}
           <div className="grid grid-cols-3 gap-14">
             <div className="col-span-2">
-              <p className="mt-12 text-7xl font-normal">
+              <p className="mt-12 text-7xl font-bold">
                 Your Social Media Sidekick
               </p>
               <div className="flex gap-4">
@@ -48,7 +48,7 @@ export default function Hero() {
                   height={67}
                   className="ml-[50%]"
                 />
-                <p className="text-3xl">Sentiment Analysis</p>
+                <p className="text-3xl font-bold">Sentiment Analysis</p>
                 <p className="text-base">
                   Discover trends and understand your customers with our
                   <span className="font-bold ml-1">
@@ -59,7 +59,7 @@ export default function Hero() {
               </div>
               <div className="flex flex-col my-4">
                 <div className="flex">
-                  <p className="text-3xl">AI-Generated Captions</p>
+                  <p className="text-3xl font-bold">AI-Generated Captions</p>
                   <Image
                     src={ArrowIcon}
                     alt="arrow svg"
@@ -75,7 +75,7 @@ export default function Hero() {
                 <Link href="#">Learn more</Link>
               </div>
               <div className="flex flex-col my-4">
-                <p className="text-3xl">Blog Posts & Newsletters</p>
+                <p className="text-3xl font-bold">Blog Posts & Newsletters</p>
                 <div className="flex">
                   <p className="text-base">
                     Quickly create blog posts and newsletters with a click by

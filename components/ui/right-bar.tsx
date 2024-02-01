@@ -17,8 +17,8 @@ export default function RightBar() {
   } else if (status === 3) {
     return <Newsletter />;
   } else if (status === 4) {
-    return <Contact />;
-  } else if (status === 5) {
     return <Analysis />;
+  } else if (status === 5) {
+    return <Contact />;
   }
 }

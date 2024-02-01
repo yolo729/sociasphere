@@ -18,7 +18,7 @@ export default function Landing() {
         {/* Hero content */}
         <div className="flex flex-col justify-center items-center pt-52 pb-12 md:pt-56 md:pb-20">
           {/* Section header */}
-          <p className="mt-8 text-7xl font-normal text-white">
+          <p className="mt-8 text-7xl font-bold text-white">
             Welcome to Sociasphere
           </p>
           <div className="my-12">

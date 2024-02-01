@@ -28,7 +28,7 @@ export default function LeftBar() {
   // const { stringValue } = router.query;
   return (
     <>
-      <div className="flex flex-col justify-start items-center px-4 bg-[#F4FAFF] h-screen">
+      <div className="flex flex-col justify-start items-center px-4 bg-[#F4FAFF] h-[116%]">
         <Logo />
         <div className="mt-24 w-full">
           {status === 1 ? (
@@ -142,7 +142,7 @@ export default function LeftBar() {
         </div>
 
         <button
-          className="my-3 btn-sm w-[18%] bottom-5 flex justify-start absolute"
+          className="my-3 btn-sm w-[18%] bottom-5 flex justify-start fixed "
           onClick={() => {
             setStatus(1);
             goHome();

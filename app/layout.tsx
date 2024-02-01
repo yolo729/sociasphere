@@ -2,12 +2,18 @@ import "./css/style.css";
 import { setStatus, getStatus } from "@/app/api/status";
 import StatusProvider from "@/context/StatusContext";
 
-import { Inter } from "next/font/google";
+import { Inter, Source_Code_Pro } from "next/font/google";
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
+});
+
+const code_pro = Source_Code_Pro({
+  subsets: ["latin"],
+  variable: "--font-codepro",
+  // display: "swap",
 });
 
 export const metadata = {

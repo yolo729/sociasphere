@@ -3,12 +3,14 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import PlaceholderImg from "@/public/images/img_placeholder.png";
+import ImgplaceholderIcon from "@/public/svgs/imageplaceholder.svg";
 import { useRouter } from "next/navigation";
 
 export default function Social() {
   const router = useRouter();
   const [text, setText] = useState<string>("No File Choosen");
   const [buttonStatus, setButtonStatus] = useState<boolean>(false);
+  const [selectedImage, setSelectedImage] = useState<File>();
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0] || null;
@@ -16,6 +18,7 @@ export default function Social() {
       setText("No File Choosen");
     } else {
       setText(file.name);
+      setSelectedImage(file);
     }
   };
   return (
@@ -28,7 +31,18 @@ export default function Social() {
           <form>
             <div className="flex flex-col w-fit">
               <div className="flex">
-                <Image src={PlaceholderImg} alt="placeholder img" />
+                {selectedImage ? (
+                  <div className="flex flex-col w-28 h-28">
+                    <img
+                      src={URL.createObjectURL(selectedImage)}
+                      alt="Thumb"
+                      className="w-full h-full"
+                    />
+                  </div>
+                ) : (
+                  <Image src={PlaceholderImg} alt="placeholder img" />
+                )}
+
                 <div className="flex flex-col ml-8 justify-around items-start">
                   <label className="italic">
                     Please update an image and description image.
@@ -39,6 +53,7 @@ export default function Social() {
                       id="actual-btn"
                       hidden
                       onChange={handleChange}
+                      accept=".jpg, .jpeg, .png"
                     />
 
                     <label
@@ -113,35 +128,56 @@ export default function Social() {
               AI-Generated Caption using GPT-4 Vision
             </label>
             <div className="border w-1/2 h-72 mt-8"></div>
-            <div className="border w-1/2 h-72 mt-8"></div>
-          </div>
+            <div className="w-1/2 my-8  h-fit">
+              <Image src={ImgplaceholderIcon} alt="" className="w-full" />
+            </div>
+            <div className="flex flex-col w-1/2 ml-8">
+              <div className="flex justify-between items-center my-2 w-3/5">
+                <p className="font-bold text-sm">
+                  Upload to Facebook Timeline:
+                </p>{" "}
+                <input
+                  type="checkbox"
+                  className="ml-2 rounded-md border-gray-400"
+                ></input>
+              </div>
+              <div className="flex justify-between items-center my-2 w-3/5">
+                <p className="font-bold text-sm">
+                  Upload to instagram Stories:
+                </p>
+                <input
+                  type="checkbox"
+                  className="ml-2 rounded-md border-gray-400"
+                ></input>
+              </div>
+            </div>
+            <div className="my-12 w-2/3 flex justify-around -ml-20">
+              <button
+                className="btn-sm bg-indigo-500 rounded-lg text-white py-4"
+                onClick={() => {
+                  setButtonStatus(false);
+                }}
+              >
+                Upload Another Image
+              </button>
+              <button
+                className="btn-sm bg-indigo-500 rounded-lg text-white py-4"
+                onClick={() => {
+                  setButtonStatus(false);
+                }}
+              >
+                Post to Instagram
+              </button>
 
-          <div className="my-12 w-full flex justify-around">
-            <button
-              className="btn-sm bg-indigo-500 rounded-lg text-white py-4"
-              onClick={() => {
-                setButtonStatus(false);
-              }}
-            >
-              Upload Another Image
-            </button>
-            <button
-              className="btn-sm bg-indigo-500 rounded-lg text-white py-4"
-              onClick={() => {
-                setButtonStatus(false);
-              }}
-            >
-              Post to Instagram
-            </button>
-
-            <button
-              className="btn-sm bg-indigo-500 rounded-lg text-white py-4"
-              onClick={() => {
-                setButtonStatus(false);
-              }}
-            >
-              Discard
-            </button>
+              <button
+                className="btn-sm bg-indigo-500 rounded-lg text-white py-4"
+                onClick={() => {
+                  setButtonStatus(false);
+                }}
+              >
+                Discard
+              </button>
+            </div>
           </div>
         </div>
       )}

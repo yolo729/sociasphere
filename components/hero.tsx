@@ -65,7 +65,7 @@ export default function Hero() {
                     alt="arrow svg"
                     width={105}
                     height={99}
-                    className="-mt-16"
+                    className="-mt-16 ml-2"
                   />
                 </div>
                 <p className="text-base">

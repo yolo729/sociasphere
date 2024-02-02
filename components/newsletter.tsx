@@ -10,6 +10,7 @@ export default function Newsletter() {
   const router = useRouter();
   const [text, setText] = useState<string>("No File Choosen");
   const [buttonStatus, setButtonStatus] = useState<boolean>(false);
+  const [selectedImage, setSelectedImage] = useState<File>();
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0] || null;
@@ -17,6 +18,7 @@ export default function Newsletter() {
       setText("No File Choosen");
     } else {
       setText(file.name);
+      setSelectedImage(file);
     }
   };
   return (
@@ -31,7 +33,17 @@ export default function Newsletter() {
           <form>
             <div className="flex flex-col w-fit ">
               <div className="flex">
-                <Image src={PlaceholderImg} alt="placeholder img" />
+                {selectedImage ? (
+                  <div className="flex flex-col w-28 h-28">
+                    <img
+                      src={URL.createObjectURL(selectedImage)}
+                      alt="Thumb"
+                      className="w-full h-full"
+                    />
+                  </div>
+                ) : (
+                  <Image src={PlaceholderImg} alt="placeholder img" />
+                )}
                 <div className="flex flex-col ml-8 justify-around items-start">
                   <label className="italic">
                     Please update an image and description image.
@@ -42,6 +54,7 @@ export default function Newsletter() {
                       id="actual-btn"
                       hidden
                       onChange={handleChange}
+                      accept=".jpg, .jpeg, .png"
                     />
 
                     <label
@@ -132,7 +145,7 @@ export default function Newsletter() {
             Your AI-driven Newsletter, created by GPT-4 with Vision, has been
             succesfully generated and shared.
           </p>
-          <Link href="/" className="underline">
+          <Link href="/" className="underline text-sm font-bold">
             Back to Home
           </Link>
         </div>

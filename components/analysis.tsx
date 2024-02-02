@@ -280,7 +280,7 @@ export default function Analysis(props: HighchartsReact.Props) {
               />
             </div>
 
-            <div className="my-8">
+            <div className="my-8 text-sm">
               <p>
                 2024-01-09: Westside Market 2840 Broadway (corner of 110th St):
                 Kirk Sims (FIVE stars): One of the best places to shop
@@ -313,14 +313,14 @@ export default function Analysis(props: HighchartsReact.Props) {
           </form>
         </div>
       ) : (
-        <div className="mx-auto px-20 sm:px-24">
+        <div className="mx-auto px-20 sm:px-24  ">
           <p className="text-5xl font-bold my-8">
             Sentiment Analysis for Westside Market 180 Third Avenue(between 16th
             and 17th St)
           </p>
 
-          <form>
-            <div className="w-3/4 my-8">
+          <form className="flex flex-col w-3/4">
+            <div className=" my-8">
               <HighchartsReact
                 highcharts={Highcharts}
                 options={options1}
@@ -329,7 +329,7 @@ export default function Analysis(props: HighchartsReact.Props) {
               />
             </div>
 
-            <div className="w-3/4 my-12">
+            <div className=" my-12">
               <HighchartsReact
                 highcharts={Highcharts}
                 options={options3}
@@ -338,7 +338,7 @@ export default function Analysis(props: HighchartsReact.Props) {
               />
             </div>
 
-            <div className="w-3/4 my-12">
+            <div className=" my-12">
               <HighchartsReact
                 highcharts={Highcharts}
                 options={options4}
@@ -347,7 +347,7 @@ export default function Analysis(props: HighchartsReact.Props) {
               />
             </div>
 
-            <div className="w-3/4 my-12">
+            <div className=" my-12">
               <HighchartsReact
                 highcharts={Highcharts}
                 options={options5}
@@ -372,6 +372,17 @@ export default function Analysis(props: HighchartsReact.Props) {
                 produce and fresh foods. We take quality control very seriously,
                 and we appreciate you bringing this to our attention.
               </p>
+            </div>
+
+            <div className="flex justify-center items-center w-full">
+              <button
+                className="btn-sm bg-indigo-500 text-white"
+                onClick={() => {
+                  setButtonStatus(false);
+                }}
+              >
+                Submit
+              </button>
             </div>
           </form>
         </div>

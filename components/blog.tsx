@@ -3,12 +3,14 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import PlaceholderImg from "@/public/images/img_placeholder.png";
+import ImgplaceholderIcon from "@/public/svgs/imageplaceholder.svg";
 import { useRouter } from "next/navigation";
 
 export default function Blog() {
   const router = useRouter();
   const [text, setText] = useState<string>("No File Choosen");
   const [buttonStatus, setButtonStatus] = useState<boolean>(false);
+  const [selectedImage, setSelectedImage] = useState<File>();
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0] || null;
@@ -16,6 +18,7 @@ export default function Blog() {
       setText("No File Choosen");
     } else {
       setText(file.name);
+      setSelectedImage(file);
     }
   };
   return (
@@ -29,11 +32,21 @@ export default function Blog() {
           </p>
           <form>
             <div className="flex mt-24">
-              <Image
-                src={PlaceholderImg}
-                alt="placeholder img"
-                className="h-[100px] w-[100px]"
-              />
+              {selectedImage ? (
+                <div className="flex flex-col w-28 h-28">
+                  <img
+                    src={URL.createObjectURL(selectedImage)}
+                    alt="Thumb"
+                    className="w-full h-full"
+                  />
+                </div>
+              ) : (
+                <Image
+                  src={PlaceholderImg}
+                  alt="placeholder img"
+                  className="h-[100px] w-[100px]"
+                />
+              )}
               <div className="flex flex-col ml-8 justify-around">
                 <label className="italic">
                   Please update an image and description image(JPG,JPEG only):
@@ -43,6 +56,7 @@ export default function Blog() {
                     type="file"
                     id="actual-btn"
                     hidden
+                    accept=".jpg, .jpeg"
                     onChange={handleChange}
                   />
 
@@ -106,7 +120,9 @@ export default function Blog() {
             <label className="text-sm font-bold">Keywords</label>
             <label className="text-sm ">None were provided</label>
             <label className="text-sm ">Image submitted:</label>
-            <div className="border w-1/2 h-72 mt-8"></div>
+            <div className="w-1/2 h-72 mt-8 h-fit">
+              <Image src={ImgplaceholderIcon} alt="" className="w-full" />
+            </div>
           </div>
           <div className="flex flex-col my-16">
             <label className="text-sm font-bold">AI Generated Post</label>

@@ -2,18 +2,24 @@ import "./css/style.css";
 import { setStatus, getStatus } from "@/app/api/status";
 import StatusProvider from "@/context/StatusContext";
 
-import { Inter, Source_Code_Pro } from "next/font/google";
+import localFont from "next/font/local";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
+const CodePro = localFont({
+  src: "../public/fonts/CodePro/WEB/CodePro-Trial-BoldLC.woff2",
   display: "swap",
+  variable: "--font-codepro",
 });
 
-const code_pro = Source_Code_Pro({
-  subsets: ["latin"],
-  variable: "--font-codepro",
-  // display: "swap",
+const DMSans = localFont({
+  src: "../public/fonts/DMsans/DMSans-VariableFont_opsz,wght.ttf",
+  display: "swap",
+  variable: "--font-dmsans",
+});
+
+const Poppins = localFont({
+  src: "../public/fonts/Poppins/Poppins-SemiBold.ttf",
+  display: "swap",
+  variable: "--font-poppin",
 });
 
 export const metadata = {
@@ -30,7 +36,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} font-inter antialiased bg-white text-gray-900 tracking-tight`}
+        className={`${DMSans.variable} ${CodePro.variable} ${Poppins.variable} font-dmsans antialiased bg-white text-gray-900 tracking-tight`}
       >
         <StatusProvider status={status}>
           <div className="flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">

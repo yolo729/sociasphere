@@ -26,7 +26,7 @@ export default function Newsletter() {
       {/* Illustration behind hero content */}
       {buttonStatus === false ? (
         <div className="mx-auto px-20 sm:px-24">
-          <p className="text-5xl font-bold my-8">Newsletter</p>
+          <p className="text-5xl font-bold my-8 font-poppin">Newsletter</p>
           <p className="text-sm font-bold my-8">
             Fill out the form to customize your newsletter.
           </p>
@@ -138,7 +138,7 @@ export default function Newsletter() {
         </div>
       ) : (
         <div className="mx-auto px-20 sm:px-24">
-          <p className="text-5xl font-bold my-8">
+          <p className="text-5xl font-bold my-8 font-poppin">
             Newsletter Succesfully Generated And Sent!
           </p>
           <p className="text-sm font-bold my-8">

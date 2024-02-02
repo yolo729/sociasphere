@@ -13,7 +13,7 @@ export default function Contact() {
       {/* Illustration behind hero content */}
 
       <div className="mx-auto px-12 sm:px-14 col-span-7 w-full">
-        <p className="text-5xl font-bold my-8">Contact</p>
+        <p className="text-5xl font-bold my-8 font-poppin">Contact</p>
         <p className="text-sm font-bold my-8">
           Questions or ideas? We would love to hear from you!
         </p>

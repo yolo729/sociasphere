@@ -250,7 +250,7 @@ export default function Analysis(props: HighchartsReact.Props) {
       {/* Illustration behind hero content */}
       {buttonStatus === false ? (
         <div className="mx-auto px-20 sm:px-24">
-          <p className="text-5xl font-bold my-8">
+          <p className="text-5xl font-bold my-8 font-poppin">
             Sentiment Analysis - Westside Market NYC
           </p>
 
@@ -314,7 +314,7 @@ export default function Analysis(props: HighchartsReact.Props) {
         </div>
       ) : (
         <div className="mx-auto px-20 sm:px-24  ">
-          <p className="text-5xl font-bold my-8">
+          <p className="text-5xl font-bold my-8 font-poppin">
             Sentiment Analysis for Westside Market 180 Third Avenue(between 16th
             and 17th St)
           </p>

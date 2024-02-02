@@ -26,7 +26,7 @@ export default function Social() {
       {/* Illustration behind hero content */}
       {buttonStatus === false ? (
         <div className="mx-auto px-20 sm:px-24">
-          <p className="text-5xl font-bold my-8">Social Media Post</p>
+          <p className="text-5xl  my-8 font-poppin">Social Media Post</p>
           <p className="text-sm font-bold my-8">Great! Let's create a post.</p>
           <form>
             <div className="flex flex-col w-fit">
@@ -115,7 +115,9 @@ export default function Social() {
         </div>
       ) : (
         <div className="mx-auto px-20 sm:px-24">
-          <p className="text-5xl font-bold my-8">AI Image Analysis Results</p>
+          <p className="text-5xl font-bold my-8 font-poppin">
+            AI Image Analysis Results
+          </p>
           <p className="text-sm font-bold my-8">
             Here's your AI-generated captions!
           </p>

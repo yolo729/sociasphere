@@ -26,7 +26,7 @@ export default function Blog() {
       {/* Illustration behind hero content */}
       {buttonStatus === false ? (
         <div className="mx-auto px-20 sm:px-24">
-          <p className="text-5xl font-bold my-8">Blog Post</p>
+          <p className="text-5xl font-bold my-8 font-poppin">Blog Post</p>
           <p className="text-sm font-bold my-8">
             Fill out the form below to generate a post.
           </p>
@@ -107,7 +107,9 @@ export default function Blog() {
         </div>
       ) : (
         <div className="mx-auto px-20 sm:px-24">
-          <p className="text-5xl font-bold my-8">AI-Generated Blog Post</p>
+          <p className="text-5xl font-bold my-8 font-poppin">
+            AI-Generated Blog Post
+          </p>
           <p className="text-sm font-bold my-8">
             Here is your AI-generated post!
           </p>

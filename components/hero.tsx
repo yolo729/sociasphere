@@ -18,13 +18,13 @@ export default function Hero() {
           {/* Section header */}
           <div className="grid grid-cols-3 gap-14">
             <div className="col-span-2">
-              <p className="mt-12 text-7xl font-bold">
+              <p className="mt-12 text-7xl font-codepro">
                 Your Social Media Sidekick
               </p>
               <div className="flex gap-4">
                 <div className="flex flex-col">
                   <Image src={PentrackImg} alt="pen track" />
-                  <p className="mt-12">
+                  <p className="mt-12 font-dmsans">
                     With the power of AI, generate social media captions, posts,
                     blogs, and newsletters in{" "}
                     <span className="font-bold ml-1">seconds</span>.

@@ -64,6 +64,8 @@ module.exports = {
       fontFamily: {
         inter: ["var(--font-inter)", "sans-serif"],
         codepro: ["var(--font-codepro)"],
+        dmsans: ["var(--font-dmsans)"],
+        poppin: ["var(--font-poppin)"],
       },
       fontSize: {
         xs: "0.75rem",

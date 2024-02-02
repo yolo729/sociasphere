@@ -27,7 +27,9 @@ export default function Social() {
       {buttonStatus === false ? (
         <div className="mx-auto px-20 sm:px-24">
           <p className="text-5xl  my-8 font-poppin">Social Media Post</p>
-          <p className="text-sm font-bold my-8">Great! Let's create a post.</p>
+          <p className="text-sm font-bold my-8 font-codepro">
+            Great! Let's create a post.
+          </p>
           <form>
             <div className="flex flex-col w-fit">
               <div className="flex">
@@ -118,8 +120,8 @@ export default function Social() {
           <p className="text-5xl font-bold my-8 font-poppin">
             AI Image Analysis Results
           </p>
-          <p className="text-sm font-bold my-8">
-            Here's your AI-generated captions!
+          <p className="text-sm font-bold my-8 font-codepro">
+            Here is your AI-generated captions!
           </p>
           <div className="flex flex-col mt-4">
             <label className="text-sm font-bold">Description:</label>

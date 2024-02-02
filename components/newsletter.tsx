@@ -27,7 +27,7 @@ export default function Newsletter() {
       {buttonStatus === false ? (
         <div className="mx-auto px-20 sm:px-24">
           <p className="text-5xl font-bold my-8 font-poppin">Newsletter</p>
-          <p className="text-sm font-bold my-8">
+          <p className="text-sm font-bold my-8 font-codepro">
             Fill out the form to customize your newsletter.
           </p>
           <form>
@@ -141,7 +141,7 @@ export default function Newsletter() {
           <p className="text-5xl font-bold my-8 font-poppin">
             Newsletter Succesfully Generated And Sent!
           </p>
-          <p className="text-sm font-bold my-8">
+          <p className="text-sm font-bold my-8 font-codepro">
             Your AI-driven Newsletter, created by GPT-4 with Vision, has been
             succesfully generated and shared.
           </p>

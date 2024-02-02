@@ -5,7 +5,7 @@ import StatusProvider from "@/context/StatusContext";
 import localFont from "next/font/local";
 
 const CodePro = localFont({
-  src: "../public/fonts/CodePro/WEB/CodePro-Trial-BoldLC.woff2",
+  src: "../public/fonts/CodePro/Code Pro Bold LC.otf",
   display: "swap",
   variable: "--font-codepro",
 });

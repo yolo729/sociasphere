@@ -39,9 +39,7 @@ export default async function RootLayout({
         className={`${DMSans.variable} ${CodePro.variable} ${Poppins.variable} font-dmsans antialiased bg-white text-gray-900 tracking-tight`}
       >
         <StatusProvider status={status}>
-          <div className="flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
-            {children}
-          </div>
+          <div className="flex flex-col min-h-screen ">{children}</div>
         </StatusProvider>
       </body>
     </html>

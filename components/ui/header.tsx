@@ -30,12 +30,12 @@ export default function Header() {
       <div className="mx-auto px-5 sm:px-6">
         <div className="flex flex-row items-center h-16 md:h-20">
           {/* Site branding */}
-          <div className="basis-1/3">
+          <div className="basis-1/2 md:basis-1/3">
             <Logo />
           </div>
 
           {/* Site Links */}
-          <div className="basis-1/3 justify-center inline-flex ">
+          <div className="basis-1/3 justify-center  hidden md:inline-flex md:grow ">
             <Link
               href="/product"
               className="px-1 md: px-2 lg:px-4 text-sm md:text-base lg:text-base font-medium"

@@ -37,7 +37,7 @@ export default function MobileMenu() {
   });
 
   return (
-    <div className="basis-1/3 items-center justify-center flex md:hidden">
+    <div className="basis-1/2 items-center justify-end flex md:hidden">
       {/* Hamburger button */}
       <button
         ref={trigger}
@@ -73,6 +73,30 @@ export default function MobileMenu() {
           leaveTo="opacity-0"
         >
           <ul className="px-5 py-2">
+            <li>
+              <Link
+                href="/product"
+                className="flex font-medium w-full text-gray-600 hover:text-gray-900 py-2 justify-center"
+              >
+                Product
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/pricing"
+                className="flex font-medium w-full text-gray-600 hover:text-gray-900 py-2 justify-center"
+              >
+                Pricing
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/contact"
+                className="flex font-medium w-full text-gray-600 hover:text-gray-900 py-2 justify-center"
+              >
+                Contact
+              </Link>
+            </li>
             <li>
               <Link
                 href="/signin"

@@ -48,7 +48,7 @@ export default function Hero() {
               href="/home"
               className="flex md:hidden btn-sm mt-12 text-gray-200 bg-indigo-500 rounded-xl shadow-allshadow shadow-indigo-500/50 hover:bg-indigo-400 w-full"
             >
-              <span>Try Free Triadddl</span>
+              <span>Try Free Trial</span>
             </Link>
             <div className="flex flex-col">
               <div className="flex flex-col mb-4">

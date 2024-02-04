@@ -23,7 +23,7 @@ export default function DefaultLayout({
 
   return (
     <>
-      <main className="grow bg-[#001A3D] h-screen">{children}</main>
+      <main className="grow bg-[#001A3D] h-full md:h-screen">{children}</main>
     </>
   );
 }

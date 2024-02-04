@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 
 import Link from "next/link";
+import MobileMenuOne from "./mobile-menu-one";
 import Logo from "./logo-one";
 import { useRouter } from "next/navigation";
 import { useStatus } from "@/context/StatusContext";
@@ -32,7 +33,7 @@ export default function Header() {
   return (
     <header
       className={`fixed w-full z-30 md:bg-opacity-90 transition duration-300 ease-in-out ${
-        !top ? "bg-white backdrop-blur-sm shadow-lg" : ""
+        !top ? "bg-[#001A3D] backdrop-blur-sm shadow-lg" : ""
       }`}
     >
       <div className="mx-auto px-5 sm:px-6">
@@ -43,7 +44,7 @@ export default function Header() {
           </div>
 
           {/* Site Links */}
-          <div className="inline-flex justify-center">
+          <div className="hidden md:flex md:grow inline-flex justify-center">
             <Link href="/" className="px-4 font-medium text-white">
               Home
             </Link>
@@ -59,6 +60,7 @@ export default function Header() {
               Contact
             </button>
           </div>
+          <MobileMenuOne />
         </div>
       </div>
     </header>

@@ -25,14 +25,16 @@ export default function Social() {
     <section className="relative">
       {/* Illustration behind hero content */}
       {buttonStatus === false ? (
-        <div className="mx-auto px-20 sm:px-24">
-          <p className="text-5xl  my-8 font-poppin">Social Media Post</p>
-          <p className="text-sm font-bold my-8 font-codepro">
+        <div className="mx-auto px-12 md:px-24">
+          <p className="text-2xl md:text-5xl  my-8 font-poppin">
+            Social Media Post
+          </p>
+          <p className="text-xs md:text-sm font-bold my-8 font-codepro">
             Great! Let's create a post.
           </p>
           <form>
-            <div className="flex flex-col w-fit">
-              <div className="flex">
+            <div className="flex flex-col w-full md:w-fit">
+              <div className="flex flex-col md:flex-row justify-center items-center">
                 {selectedImage ? (
                   <div className="flex flex-col w-28 h-28">
                     <img
@@ -116,8 +118,8 @@ export default function Social() {
           </form>
         </div>
       ) : (
-        <div className="mx-auto px-20 sm:px-24">
-          <p className="text-5xl font-bold my-8 font-poppin">
+        <div className="mx-auto px-12 md:px-24">
+          <p className="text-xl md:text-5xl font-bold my-8 font-poppin">
             AI Image Analysis Results
           </p>
           <p className="text-sm font-bold my-8 font-codepro">
@@ -125,14 +127,14 @@ export default function Social() {
           </p>
           <div className="flex flex-col mt-4">
             <label className="text-sm font-bold">Description:</label>
-            <div className="border w-1/2 h-72 mt-8"></div>
+            <div className="border w-full md:w-1/2 h-72 mt-8"></div>
           </div>
           <div className="flex flex-col mt-16">
             <label className="text-sm font-bold">
               AI-Generated Caption using GPT-4 Vision
             </label>
-            <div className="border w-1/2 h-72 mt-8"></div>
-            <div className="w-1/2 my-8  h-fit">
+            <div className="border w-full md:w-1/2 h-72 mt-8"></div>
+            <div className="w-full md:w-1/2 my-8  h-fit">
               <Image src={ImgplaceholderIcon} alt="" className="w-full" />
             </div>
             <div className="flex flex-col w-1/2 ml-8">
@@ -155,9 +157,9 @@ export default function Social() {
                 ></input>
               </div>
             </div>
-            <div className="my-12 w-2/3 flex justify-around -ml-20">
+            <div className="my-4 md:my-12 w-full md:w-2/3 flex flex-col md:flex-row justify-around md:-ml-20">
               <button
-                className="btn-sm bg-indigo-500 rounded-lg text-white py-4"
+                className="btn-sm bg-indigo-500 rounded-lg text-white py-4 my-4 md:my-0"
                 onClick={() => {
                   setButtonStatus(false);
                 }}
@@ -165,7 +167,7 @@ export default function Social() {
                 Upload Another Image
               </button>
               <button
-                className="btn-sm bg-indigo-500 rounded-lg text-white py-4"
+                className="btn-sm bg-indigo-500 rounded-lg text-white py-4 my-4 md:my-0"
                 onClick={() => {
                   setButtonStatus(false);
                 }}
@@ -174,7 +176,7 @@ export default function Social() {
               </button>
 
               <button
-                className="btn-sm bg-indigo-500 rounded-lg text-white py-4"
+                className="btn-sm bg-indigo-500 rounded-lg text-white py-4 my-4 md:my-0"
                 onClick={() => {
                   setButtonStatus(false);
                 }}

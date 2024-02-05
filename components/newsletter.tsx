@@ -25,14 +25,16 @@ export default function Newsletter() {
     <section className="relative">
       {/* Illustration behind hero content */}
       {buttonStatus === false ? (
-        <div className="mx-auto px-20 sm:px-24">
-          <p className="text-5xl font-bold my-8 font-poppin">Newsletter</p>
+        <div className="mx-auto px-12 md:px-24">
+          <p className="text-xl md:text-5xl font-bold my-8 font-poppin">
+            Newsletter
+          </p>
           <p className="text-sm font-bold my-8 font-codepro">
             Fill out the form to customize your newsletter.
           </p>
           <form>
             <div className="flex flex-col w-fit ">
-              <div className="flex">
+              <div className="flex flex-col md:flex-row justify-center items-center">
                 {selectedImage ? (
                   <div className="flex flex-col w-28 h-28">
                     <img
@@ -137,8 +139,8 @@ export default function Newsletter() {
           </form>
         </div>
       ) : (
-        <div className="mx-auto px-20 sm:px-24">
-          <p className="text-5xl font-bold my-8 font-poppin">
+        <div className="mx-auto px-12 md:px-24">
+          <p className="text-xl md:text-5xl font-bold my-8 font-poppin">
             Newsletter Succesfully Generated And Sent!
           </p>
           <p className="text-sm font-bold my-8 font-codepro">

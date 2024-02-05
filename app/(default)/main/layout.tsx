@@ -25,7 +25,7 @@ export default function DefaultLayout({
     <>
       <main className="grow grid grid-cols-5">
         <LeftBar />
-        <div className="col-span-4">{children}</div>
+        <div className="col-span-5 md:col-span-4">{children}</div>
       </main>
     </>
   );

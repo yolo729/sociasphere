@@ -9,7 +9,6 @@ import { useStatus } from "@/context/StatusContext";
 
 export default function RightBar() {
   const [status] = useStatus();
-  console.log("----test status----------", status);
   if (status === 1) {
     return <Social />;
   } else if (status === 2) {

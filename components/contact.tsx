@@ -12,8 +12,10 @@ export default function Contact() {
     <section className="relative grid grid-cols-11 gap-8">
       {/* Illustration behind hero content */}
 
-      <div className="mx-auto px-12 sm:px-14 col-span-7 w-full">
-        <p className="text-5xl font-bold my-8 font-poppin">Contact</p>
+      <div className="mx-auto px-12 md:px-14 col-span-11 md:col-span-7 w-full">
+        <p className="text-xl md:text-5xl font-bold my-8 font-poppin">
+          Contact
+        </p>
         <p className="text-sm font-bold my-8 font-codepro">
           Questions or ideas? We would love to hear from you!
         </p>
@@ -50,8 +52,8 @@ export default function Contact() {
           </button>
         </form>
       </div>
-      <div className="col-span-4 py-32 px-8">
-        <div className="bg-indigo-500 mt-12 py-12 px-8 h-full">
+      <div className="col-span-11 md:col-span-4 py-12 md:py-32 px-8">
+        <div className="bg-indigo-500 mt-4 md:mt-12 py-4 md:py-12 px-8 h-full">
           <div className="flex py-8">
             <Image src={PhoneIcon} alt="phone icon" />
             <p className="text-white text-bold ml-2">123 456 7890</p>

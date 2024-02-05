@@ -25,8 +25,10 @@ export default function Blog() {
     <section className="relative">
       {/* Illustration behind hero content */}
       {buttonStatus === false ? (
-        <div className="mx-auto px-20 sm:px-24">
-          <p className="text-5xl font-bold my-8 font-poppin">Blog Post</p>
+        <div className="mx-auto px-12 md:px-24">
+          <p className="text-xl md:text-5xl font-bold my-8 font-poppin">
+            Blog Post
+          </p>
           <p className="text-sm font-bold my-8 font-codepro">
             Fill out the form below to generate a post.
           </p>
@@ -106,8 +108,8 @@ export default function Blog() {
           </form>
         </div>
       ) : (
-        <div className="mx-auto px-20 sm:px-24">
-          <p className="text-5xl font-bold my-8 font-poppin">
+        <div className="mx-auto px-12 md:px-24">
+          <p className="text-xl md:text-5xl font-bold my-8 font-poppin">
             AI-Generated Blog Post
           </p>
           <p className="text-sm font-bold my-8 font-codepro">
@@ -116,19 +118,19 @@ export default function Blog() {
 
           <div className="flex flex-col mt-4">
             <label className="text-sm font-bold">Description:</label>
-            <div className="border w-1/2 h-72 mt-8"></div>
+            <div className="border w-full md:w-1/2 h-36 md:h-72 mt-8"></div>
           </div>
           <div className="flex flex-col mt-16">
             <label className="text-sm font-bold">Keywords</label>
             <label className="text-sm ">None were provided</label>
             <label className="text-sm ">Image submitted:</label>
-            <div className="w-1/2 h-72 mt-8 h-fit">
+            <div className="w-full md:w-1/2 h-72 mt-8 h-fit">
               <Image src={ImgplaceholderIcon} alt="" className="w-full" />
             </div>
           </div>
           <div className="flex flex-col my-16">
             <label className="text-sm font-bold">AI Generated Post</label>
-            <div className="border w-1/2 h-72 mt-8"></div>
+            <div className="border w-full md:w-1/2 h-36 md:h-72 mt-8"></div>
           </div>
         </div>
       )}

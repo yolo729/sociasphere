@@ -249,13 +249,13 @@ export default function Analysis(props: HighchartsReact.Props) {
     <section className="relative">
       {/* Illustration behind hero content */}
       {buttonStatus === false ? (
-        <div className="mx-auto px-20 sm:px-24">
-          <p className="text-5xl font-bold my-8 font-poppin">
+        <div className="mx-auto px-12 md:px-24">
+          <p className="text-xl md:text-5xl font-bold my-8 font-poppin">
             Sentiment Analysis - Westside Market NYC
           </p>
 
           <form>
-            <div className="flex flex-col w-fit">
+            <div className="flex flex-col w-full md:w-fit">
               <label className="text-sm font-bold">Select a store</label>
               <select className="my-8 rounded-3xl border-slate-200 border-2 w-56">
                 <option>Westside</option>
@@ -271,7 +271,7 @@ export default function Analysis(props: HighchartsReact.Props) {
               Analyze Performance
             </button>
 
-            <div className="mt-8 w-1/2">
+            <div className="mt-8 w-full md:w-1/2">
               <HighchartsReact
                 highcharts={Highcharts}
                 options={options}
@@ -313,13 +313,13 @@ export default function Analysis(props: HighchartsReact.Props) {
           </form>
         </div>
       ) : (
-        <div className="mx-auto px-20 sm:px-24  ">
-          <p className="text-5xl font-bold my-8 font-poppin">
+        <div className="mx-auto px-12 md:px-24  ">
+          <p className="text-xl md:text-5xl font-bold my-8 font-poppin">
             Sentiment Analysis for Westside Market 180 Third Avenue(between 16th
             and 17th St)
           </p>
 
-          <form className="flex flex-col w-3/4">
+          <form className="flex flex-col w-full md:w-3/4">
             <div className=" my-8">
               <HighchartsReact
                 highcharts={Highcharts}
